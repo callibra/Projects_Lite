@@ -39,6 +39,8 @@ header a {
   gap: 100px;
 }
 .workout-details {
+  position: relative; /* Set relative positioning for the parent */
+  padding: 20px; /* Add padding if necessary */
   background: #fff;
   border-radius: 4px;
   margin: 20px auto;
@@ -109,14 +111,26 @@ nav a{
   margin-left: 10px;
 }
 nav button{
-  background: white;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  padding: 6px 10px;
-  border-radius: 4px;
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 5px;
   font-family: "Poppins";
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1em;
+  margin: 5px;
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+nav button:hover{
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 5px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  transform: rotate(3deg); /* Rotate 3 degrees on hover */
 }
 /* Auth forms */
 form.signup, form.login{
@@ -126,3 +140,53 @@ form.signup, form.login{
   background: white;
   border-radius: 4px;
 }
+/* Loader */
+.loader-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;         
+}
+/* Edit button */
+.edit-button{
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 5px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+  position: absolute; /* Allow for positioning */
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the left */
+}
+/* Delete button */
+.delete-button{
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute; /* Allow for positioning */
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the left */
+}
+/* Close-button */
+.close-button {
+  background: none;
+  border: none;
+  color: red; /* Red color for visibility */
+  font-size: 25px; /* Make it larger */
+  cursor: pointer; /* Pointer cursor */
+  position: absolute; /* Position it within the form */
+  top: 10px;
+  right: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+.close-button:hover {
+  transform: rotate(15deg); /* Rotate 15 degrees on hover */
+}
+
