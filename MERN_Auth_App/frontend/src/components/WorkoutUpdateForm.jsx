@@ -57,7 +57,7 @@ const WorkoutUpdateForm = ({ workout, onClose }) => {
     <div className="update-form" ref={formRef}>
       <button className="close-button" onClick={onClose}>X</button> {/* Close button */}
       <form onSubmit={handleSubmit}>
-        <h3>Update Workout</h3>
+        <h3>Edit Workout</h3>
 
         <label>Exercise Title:</label>
         <input 
