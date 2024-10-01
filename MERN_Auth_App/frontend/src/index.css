@@ -90,6 +90,10 @@ form button {
   font-family: "Poppins";
   border-radius: 4px;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+form button:hover {
+  transform: rotate(3deg); /* Rotate 3 degrees on hover */
 }
 div.error {
   padding: 10px;
@@ -160,6 +164,11 @@ form.signup, form.login{
   position: absolute; /* Allow for positioning */
   bottom: 20px; /* Position from the bottom */
   right: 20px; /* Position from the left */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+  display: inline-block; /* Ensures it can be transformed properly */
+}
+.edit-button:hover{
+  transform: rotate(3deg); /* Rotate 3 degrees on hover */
 }
 /* Delete button */
 .delete-button{
@@ -173,13 +182,18 @@ form.signup, form.login{
   position: absolute; /* Allow for positioning */
   bottom: 20px; /* Position from the bottom */
   right: 20px; /* Position from the left */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+  display: inline-block; /* Ensures it can be transformed properly */
+}
+.delete-button:hover{
+  transform: rotate(3deg); /* Rotate 3 degrees on hover */
 }
 /* Close-button */
 .close-button {
   background: none;
   border: none;
   color: red; /* Red color for visibility */
-  font-size: 25px; /* Make it larger */
+  font-size: 20px; /* Make it larger */
   cursor: pointer; /* Pointer cursor */
   position: absolute; /* Position it within the form */
   top: 10px;
@@ -189,4 +203,39 @@ form.signup, form.login{
 .close-button:hover {
   transform: rotate(15deg); /* Rotate 15 degrees on hover */
 }
-
+.login-button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 5px 10px; /* Add some horizontal padding */
+  font-family: "Poppins", sans-serif; /* Ensure a fallback font */
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+  display: inline-block; /* Ensures it can be transformed properly */
+}
+.login-button:hover {
+  transform: rotate(3deg); /* Rotate 3 degrees on hover */
+}
+.email-user {
+  background: var(--primary);
+  border: 0;
+  color: #ffee03;
+  padding: 3px 9px 5px 9px;
+  font-family: "Poppins";
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 2px;
+  transition: transform 0.3s ease;
+  display: inline-block; /* Ensures it can be transformed properly */
+}
+.email-user:hover {
+  transform: rotate(3deg); /* Rotate 3 degrees on hover */
+}
+.welcome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

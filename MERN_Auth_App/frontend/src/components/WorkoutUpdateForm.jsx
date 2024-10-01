@@ -39,19 +39,19 @@ const WorkoutUpdateForm = ({ workout, onClose }) => {
     }
   }
 
-  // Close the form when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (formRef.current && !formRef.current.contains(event.target)) {
-        onClose()
-      }
-    }
+  // // Close the form when clicking outside
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (formRef.current && !formRef.current.contains(event.target)) {
+  //       onClose()
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [onClose])
+  //   document.addEventListener("mousedown", handleClickOutside)
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside)
+  //   }
+  // }, [onClose])
 
   return (
     <div className="update-form" ref={formRef}>

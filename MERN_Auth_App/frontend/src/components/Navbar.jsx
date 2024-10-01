@@ -14,19 +14,22 @@ const Navbar = () => {
     <header>
       <div className="container">
         <Link to="/">
-          <h1>Workout Buddy</h1>
+          <h1>MERN Auth App</h1>
         </Link>
         <nav>
           {user && (
-            <div>
-              <span>{user.email}</span>
+            <div className='welcome'>
+              <div>
+                <span style={{ color: 'grey' }}>Welcome back ! </span>
+                <span className='email-user'>{user.email}</span>
+              </div>
               <button onClick={handleClick}>Log out</button>
             </div>
           )}
           {!user && (
             <div>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Signup</Link>
+          <Link to="/login" className='login-button'>Login</Link>
+          <Link to="/signup" className='login-button'>Signup</Link>
           </div>
           )}
         </nav>
