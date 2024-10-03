@@ -1,1 +1,1 @@
-Lite Mern Auth Aplication.
+Lite Mern Auth Application.
